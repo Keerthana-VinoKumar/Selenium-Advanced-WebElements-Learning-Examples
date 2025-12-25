@@ -20,7 +20,7 @@ public class Advanced_WebElements {
 		WebDriver driver = new ChromeDriver();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
-		/*driver.get("https://the-internet.herokuapp.com");
+		driver.get("https://the-internet.herokuapp.com");
 		//Web Element Used - Multiple Window
 		//Scenario - 1->Click link → new tab/window opens → switch → verify heading → close → back to parent.
 		String parent = driver.getWindowHandle();
@@ -87,7 +87,7 @@ public class Advanced_WebElements {
 		//Read alert text
 		System.out.println("Alert text: " + alert.getText());
 		//Accept the alert
-		alert.accept(); */
+		alert.accept(); 
 		
 		//Web Element Used - File Upload
 		//Scenario-5 -> User needs to upload a document (e.g., resume, config, CSV).You must select a local file and verify that it is attached.
@@ -100,9 +100,8 @@ public class Advanced_WebElements {
 		System.out.println("File input value:" +value);
 		driver.findElement(By.cssSelector("Button[type = 'submit']")).click();	
 		
-		/*Web Element Used - tooltips
-		//Scenario-6 -> Locate the first text input,(Optional) Set a tooltip using JS if missing,Hover using Action,Read title attribute as tooltip text*/
-		/*driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+		//Web Element Used - tooltips
+		//Scenario-6 -> Locate the first text input,(Optional) Set a tooltip using JS if missing,Hover using Action,Read title attribute as tooltip text*
 		WebElement textInput = driver.findElement(By.cssSelector("input[type='text']"));
         // OPTIONAL: if the element has no title, we add one so you can practice tooltip		
 		js.executeScript("arguments[0].setAttribute('title','Enter your name here');", textInput);
@@ -111,7 +110,7 @@ public class Advanced_WebElements {
 		actions.moveToElement(textInput).perform();
 		 // Read tooltip text from title attribute
 		String tooltipText = textInput.getAttribute("title");
-		System.out.println("Tooltip tex:" +tooltipText);*/
+		System.out.println("Tooltip tex:" +tooltipText);
 		
 		//Web Element Used - Frames
 		//Scenario - 7 -> Switch to the main result frame.Switch to the main result frame.
